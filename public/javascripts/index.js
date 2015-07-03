@@ -1,5 +1,5 @@
-var imageHighUrls = ["/images/nycempirestate-high.jpg", "/images/nycstreet-high.jpg"];
-var imageLowUrls = ["/images/nycempirestate-low.jpg", "/images/nycstreet-low.jpg"];
+var imageHighUrls = ["/images/nycstatueoflib-high.jpg", "/images/nycrainbow-high.jpg", "/images/nycgrandcentral-high.jpg", "/images/nycempirestate-high.jpg", "/images/nycstreet-high.jpg"];
+var imageLowUrls = ["/images/nycestatueoflib-low.jpg", "/images/nycrainbow-low.jpg", "/images/nycgrandcentral-low.jpg", "/images/nycempirestate-low.jpg", "/images/nycstreet-low.jpg"];
 var imageIndex = 0;
 $(document).ready(function() {
   setInterval(function() {

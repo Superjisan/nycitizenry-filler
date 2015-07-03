@@ -13,12 +13,15 @@ a, h1, p {
   color: #fff;
 }
 
+/*TODO: fix background colors */
+
 .wrapper{
 	background-image: url("../images/nycstreet-low.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 	height: 100%;
 	width: 100%;
+    background-position: center;
 }
 
 .wrapper.empire{
@@ -32,10 +35,20 @@ a, h1, p {
 	height: 100%;
 	width: 100%;
 	padding-top: 1rem;
+    background-position: center;
+    position: relative;
 }
 
 .content.empire{
 	background-image: url("../images/nycsempirestate-high.jpg");
+}
+
+.gradient{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .5);
 }
 
 
