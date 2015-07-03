@@ -1,0 +1,26 @@
+{
+  "name": "nycitizenry-filler",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Superjisan/nycitizenry-filler",
+  "authors": [
+    "Jisan Zaman"
+  ],
+  "keywords": [
+    "nyc",
+    "nycitizenry",
+    "opengov"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}
