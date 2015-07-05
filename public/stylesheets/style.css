@@ -16,22 +16,19 @@ a, h1, p {
 /*TODO: fix background colors */
 
 .wrapper{
-	background-image: url("../images/nycstreet-low.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+	/*background-image: url("../images/nycstreet-low.jpg");*/
+    /*background-repeat: no-repeat;
+    background-size: cover;*/
 	height: 100%;
 	width: 100%;
     background-position: center;
 }
 
-.wrapper.empire{
-	background-image: url("../images/nycsempirestate-low.jpg");
-}
 
 .content{
-	background-image: url("../images/nycstreet-high.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+	/*background-image: url("../images/nycstreet-high.jpg");*/
+    /*background-repeat: no-repeat;
+    background-size: cover;*/
 	height: 100%;
 	width: 100%;
 	padding-top: 1rem;
@@ -39,9 +36,40 @@ a, h1, p {
     position: relative;
 }
 
-.content.empire{
-	background-image: url("../images/nycsempirestate-high.jpg");
+.bgimg{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
+
+.bgimg:not(.nycstreet){
+    display: none;
+}
+
+.bgimg.nycstreet{
+    background-image: url("../images/nycstreet-high.jpg");
+}
+
+.bgimg.nycstatue{
+    background-image: url("../images/nycstatueoflib-high.jpg");
+}
+
+.bgimg.nycempire{
+    background-image: url("../images/nycempirestate-high.jpg");
+}
+
+.bgimg.nycgrand {
+    background-image: url("../images/nycgrandcentral-high.jpg");
+}
+
+.bgimg.nycrainbow{
+    background-image: url("../images/nycrainbow-high.jpg");
+}
+
+
 
 .gradient{
     position: absolute;
@@ -50,6 +78,8 @@ a, h1, p {
     width: 100%;
     background-color: rgba(0, 0, 0, .5);
 }
+
+
 
 
 

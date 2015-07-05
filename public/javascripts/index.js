@@ -1,20 +1,24 @@
-var imageHighUrls = ["/images/nycstatueoflib-high.jpg", "/images/nycrainbow-high.jpg", "/images/nycgrandcentral-high.jpg", "/images/nycempirestate-high.jpg", "/images/nycstreet-high.jpg"];
-var imageLowUrls = ["/images/nycestatueoflib-low.jpg", "/images/nycrainbow-low.jpg", "/images/nycgrandcentral-low.jpg", "/images/nycempirestate-low.jpg", "/images/nycstreet-low.jpg"];
+var directions = ["up", "down", "left", "right"];
+var effects = ["drop", "clip", "puff", "fade"];
+var divClasses = [".nycstatue", ".nycempire", ".nycgrand", ".nycrainbow", ".nycstreet"]
 var imageIndex = 0;
+var directionIndex = 0;
+
 $(document).ready(function() {
   setInterval(function() {
-    if (imageIndex === imageHighUrls.length - 1) {
-      imageIndex = 0
-    } else {
-      imageIndex++
-    };
-
-    if (!imageLowUrls[imageIndex]) {
+    if (!divClasses[imageIndex]) {
       throw new Error("image url not found in index");
     } else {
-      $(".wrapper").css("background-image", "url(" + imageLowUrls[imageIndex] + ")");
-      $(".content").css("background-image", "url(" + imageHighUrls[imageIndex] + ")");
+      var indexBefore = (imageIndex == 0) ? divClasses.length - 1 : imageIndex - 1;
+      $(divClasses[indexBefore]).hide("drop", {
+        direction: directions[directionIndex]
+      }, 400, function() {
+        $(divClasses[imageIndex]).show(effects[directionIndex], "linear", 700, function() {
+          imageIndex = (imageIndex === divClasses.length - 1) ? 0 : imageIndex + 1;
+          directionIndex = (directionIndex === directions.length - 1) ? 0 : directionIndex + 1;
+        });
+      });
     }
 
-  }, 3000);
+  }, 5000);
 })
